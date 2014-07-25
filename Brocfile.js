@@ -2,7 +2,10 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+    // workaround bug in ember-cli-sass 1.0.0
+    sassOptions: {}
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
